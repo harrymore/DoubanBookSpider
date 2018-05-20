@@ -44,6 +44,13 @@ https://book.douban.com/subject/bookid/，
 
 ![](https://github.com/harrymore/DoubanBookSpider/blob/master/images/流程.jpg)
 
+## 五、操作步骤
+1. 在你的数据库执行init.sql里的语句创建相应的表；
+2. 运行douban_tags.py获取所有标签；
+3. 根据自己的情况（上网方式，路由型号，账号密码）修改douban_books.py里关于断线重新disconnect_router()里的信息;
+4. 运行douban_books.py开始爬取信息
+
+## 六、完成爬虫
 花了几天时间，最后终于完成了所有标签的爬取工作，爬到的数据去重后有6万条左右。因为各个标签之间肯定有重叠的部分，所以符合原来的预期。
 写爬虫还是挺有意思的，有时间再写一个爬全部书籍信息的爬虫。
 
