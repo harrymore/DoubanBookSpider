@@ -47,7 +47,7 @@ https://book.douban.com/subject/bookid/，
 ## 五、操作步骤
 1. 在你的数据库执行init.sql里的语句创建相应的表；
 2. 运行douban_tags.py获取所有标签；
-3. 根据自己的情况（上网方式，路由型号，账号密码）修改douban_books.py里关于断线重新disconnect_router()里的信息;
+3. 根据自己的情况（上网方式，路由型号，账号密码）修改douban_books.py里关于断线重新disconnect_router()里的信息，用python控制路由的思路可以参考一下[用python控制你的路由器](http://www.cnblogs.com/harrymore/p/9048948.html)
 4. 运行douban_books.py开始爬取信息
 
 ## 六、完成爬虫
