@@ -26,6 +26,7 @@ https://book.douban.com/subject/bookid/，
 
 ## 三、爬虫框架及流程分析
 在这个爬虫中使用的模块有 requests，BeautifulSoup，re，logging和MySQLdb，主要流程如下图所示。
+
 ![](https://github.com/harrymore/DoubanBookSpider/blob/master/images/框架.jpg)
 
  1. 用requests模块向豆瓣网发起GET请求，获得网页返回的信息；
@@ -40,6 +41,7 @@ https://book.douban.com/subject/bookid/，
 查了半天资料，首次请求保存cookie，以后每次都修改cookiebid去请求，过一段时间还是被豆瓣检测出来了，有的页面直接返回空的或者定向到别的页面。
 最后想到了代理，写了一个动态获取免费代理并验证的函数，不过免费的ip代理不仅慢而且不稳定，又不想买收费的代理服务。
 后面查到了ADSL拨号服务器代理的相关文章，发现自己正是用ADSL上网，于是折腾了一番，写了一个断开路由器连接的函数，每当爬虫被豆瓣封杀的时候，就断开路由器连接重新获取ip，由此解决了爬虫正常运行的问题。当然，我这次爬取的数据量比较少，所以用这种方式还是能解决问题，如果是需要在短时间获取大量数据的，还是需要用代理的方式。
+
 ![](https://github.com/harrymore/DoubanBookSpider/blob/master/images/流程.jpg)
 
 花了几天时间，最后终于完成了所有标签的爬取工作，爬到的数据去重后有6万条左右。因为各个标签之间肯定有重叠的部分，所以符合原来的预期。
